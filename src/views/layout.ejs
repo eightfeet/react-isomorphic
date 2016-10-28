@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <%- head.title.toString() %>
+    <%- head.meta.toString() %>
+    <%- head.link.toString() %>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/common.css" media="screen" title="no title" charset="utf-8">
+    <style id="css"><%- cssByLoader %></style>
+    <style data-aphrodite><%- data.css.content %></style>
+    <script>
+    var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?12290cfb5f8e44f009b7c4c02017b62e";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root" className="container-fluid" ><%- content %></div>
+    <script>
+    window.INITIAL_STATE = <%- JSON.stringify(initialState) %>;
+    window.renderedClassNames = <%- JSON.stringify(data.css.renderedClassNames) %>;
+    </script>
+    <script type="text/javascript" src='<%= app %>'></script>
+  </body>
+</html>
