@@ -21,12 +21,12 @@ const redial = {
 
 const mapDispatchtoProps = {
   loadTest
-}
+};
 
 // (1) mapStateToProps是一个函数，返回值表示的是需要merge进props的state
 const mapStateToProps = (state) => ({
   posts: state.posts.data,
-  test: state.test.data,
+  test: state.test.data
 });
 
 const PostListPage = ({ posts, test }) =>
@@ -38,7 +38,7 @@ const PostListPage = ({ posts, test }) =>
   </div>;
 
 PostListPage.PropTypes = {
-  posts: PropTypes.array.isRequired,
+  posts: PropTypes.array.isRequired
 };
 
 // connect就是将store中的必要数据作为props传递给React组件来render，
