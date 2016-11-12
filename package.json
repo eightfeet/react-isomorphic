@@ -75,7 +75,7 @@
     "install": "^0.6.1",
     "isomorphic-style-loader": "^1.0.0",
     "ncp": "^2.0.0",
-    "node-sass": "^3.4.2",
+    "node-sass": "^3.10.1",
     "npm": "^3.8.6",
     "pleeease-filters": "^3.0.0",
     "postcss": "^5.0.19",
