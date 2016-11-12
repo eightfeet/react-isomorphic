@@ -1,0 +1,8 @@
+src/style.js
+src/store.js
+src/server.js
+src/fakeDB.js
+src/createReducer.js
+src/constants.js
+src/client.js
+tools/*.js

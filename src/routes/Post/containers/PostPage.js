@@ -8,7 +8,7 @@ import Helmet from 'react-helmet';
 import NotFound from '../../../components/NotFound';
 
 const redial = {
-  fetch: ({ dispatch, params: { slug } }) => dispatch(loadPost(slug)),
+  fetch: ({ dispatch, params: { slug } }) => dispatch(loadPost(slug))
 };
 
 const mapStateToProps = state => ({
@@ -56,13 +56,13 @@ const styles = StyleSheet.create({
   body: {
     fontSize: '1.25rem',
     lineHeight: '1.5',
-    margin: '1rem 0',
+    margin: '1rem 0'
   },
   title: {
     fontSize: '36px',
     margin: '1rem 0',
-    color: '#000',
-  },
+    color: '#000'
+  }
 });
 
 export default provideHooks(redial)(connect(mapStateToProps)(PostPage));

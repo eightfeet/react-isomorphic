@@ -28,12 +28,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     transition: '1.2s opacity ease',
     ':hover': {
-      opacity: .0,
-    },
+      opacity: 0
+    }
   },
   activeLink: {
-    color: '#000',
-  },
+    color: '#000'
+  }
 });
 
 export default Nav;

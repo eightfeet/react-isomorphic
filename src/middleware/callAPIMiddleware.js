@@ -1,10 +1,10 @@
-export function callAPIMiddleware({ dispatch, getState }) {
+export function callAPIMiddleware ({ dispatch, getState }) {
   return next => action => {
     const {
       types,
       callAPI,
       shouldCallAPI = () => true,
-      payload = {},
+      payload = {}
     } = action;
 
     if (!types) {
@@ -31,18 +31,18 @@ export function callAPIMiddleware({ dispatch, getState }) {
     const [requestType, successType, failureType] = types;
 
     dispatch(Object.assign({}, payload, {
-      type: requestType,
+      type: requestType
     }));
 
     return callAPI().then(
       response => dispatch(Object.assign({}, payload, {
         body: response,
         lastFetched: Date.now(),
-        type: successType,
+        type: successType
       })),
       error => dispatch(Object.assign({}, payload, {
         error,
-        type: failureType,
+        type: failureType
       }))
     );
   };
