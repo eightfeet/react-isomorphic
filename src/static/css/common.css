@@ -627,13 +627,13 @@ button:focus{
   left: 0;
   right: 0;
   bottom: 0;
-  top: 3.292rem;
-  z-index: 10;
+  top: 0;
+  z-index: 11;
 }
 .subicon{
   position: absolute;
   left: 0;
-  top: 0rem;
+  top: 3.292rem;
   width: 100%;
   background: #fff;
   border-top: 1px solid #e5ebee;
