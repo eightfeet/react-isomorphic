@@ -2,10 +2,11 @@ import React, { PropTypes } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import Helmet from 'react-helmet';
 import Nav from './Nav';
+import HeardBar from './HeardBar';
 
 const App = ({ children }) => {
   return (
-    <div className={css(styles.containers)}>
+    <div>
         <Helmet
           title="汤臣倍健"
           titleTemplate="%s - 同构测试"
@@ -16,8 +17,8 @@ const App = ({ children }) => {
               {"property": "og:type", "content": "article"}
           ]}
         />
-        <div className={css(styles.red)}>heardbar</div>
-        <div>
+        <HeardBar />
+        <div className={css(styles.containers)}>
           {children}
         </div>
         <div>dock</div>
@@ -26,9 +27,6 @@ const App = ({ children }) => {
 };
 
 const styles = StyleSheet.create({
-  red: {
-    color: 'red'
-  },
   containers: {
     position: 'absolute',
     left: '0',
