@@ -2,6 +2,7 @@ import React, {PropTypes, Component} from 'react';
 import {StyleSheet, css} from 'aphrodite';
 import Link from 'react-router/lib/Link';
 import s from './HeardBar.css';
+import MenuData from './MenuData';
 
 class HeardBar extends Component {
   constructor () {
@@ -70,6 +71,17 @@ class HeardBar extends Component {
                     }
                     >
                   <ul className={`clearfix  ${'subicon'} nls`}>
+                      {MenuData.map((item, i) => {
+                        <li className={`fl ${'iconitem'}`} onClick={this.handlerMenuItem}>
+                          <div className={`bdright bdbottom ${'icon-home'}`}>
+                            <Link to="/about" className={css(styles.link)} activeClassName={css(styles.link, styles.activeLink)}>
+                                首页
+                            </Link>
+                          </div>
+                        </li>
+                      })}
+
+
                       <li className={`fl ${'iconitem'}`} onClick={this.handlerMenuItem}>
                         <div className={`bdright bdbottom ${'icon-home'}`}>
                           <Link to="/about" className={css(styles.link)} activeClassName={css(styles.link, styles.activeLink)}>
