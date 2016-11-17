@@ -1,8 +1,8 @@
 import React, {PropTypes, Component} from 'react';
 import {StyleSheet, css} from 'aphrodite';
 import Link from 'react-router/lib/Link';
-import s from './HeardBar.css';
 import MenuData from './MenuData';
+import logo from './logo.png';
 
 class HeardBar extends Component {
   constructor () {
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     width: '4.042rem',
     height: '1.958rem',
     backgroundRepeat: 'no-repeat',
-    backgroundImage: 'url("/logo.png")',
+    backgroundImage: `url(${logo})`,
     backgroundSize: '100% 100%'
   }
 });

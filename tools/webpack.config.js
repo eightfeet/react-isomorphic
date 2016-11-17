@@ -126,7 +126,7 @@ const config = {
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
-        loader: 'url-loader?limit=10000&name=[hash:6].[ext]!image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}',
+        loader: 'url-loader?limit=10000&name=[hash:6].[ext]',
       },
       {
           test: /\.(woff|woff2)$/,

@@ -57,42 +57,6 @@ class HeardBar extends Component {
                   })
                 }
               </ul>
-              <div className={
-                  `${this.state.isSubMenu
-                    ? 'fr submenu show'
-                    : 'fr submenu hide'}`}
-                    onClick={
-                      this.handlerCloseMenu
-                    }
-                    >
-                  <ul className={`clearfix  ${'subicon'} nls`}>
-                      {MenuData.map((item, i) => {
-                        if (item.id === 10) {
-                          return (
-                            <li className={`fl ${'iconitem'}`} onClick={this.handlerMenuItem} key={item.id}>
-                              <div className={'bdright bdbottom'}>
-                                <p style={{ height: '1.1rem', lineHeight: '0', paddingTop: '1rem', textAlign: 'center', paddingBottom: '1.2rem' }}>
-                                  <img src={'/iconlogo.png'} style={{ width: '3.375rem' }} alt=""/>
-                                </p>
-                                <Link to={item.url} className={css(styles.link)} activeClassName={css(styles.link, styles.activeLink)}>
-                                    {item.name}
-                                </Link>
-                              </div>
-                            </li>
-                          );
-                        }
-                        return (
-                        <li className={`fl ${'iconitem'}`} onClick={this.handlerMenuItem} key={item.id}>
-                          <div className={`bdright bdbottom ${item.icon}`}>
-                            <Link to={item.url} className={css(styles.link)} activeClassName={css(styles.link, styles.activeLink)}>
-                                {item.name}
-                            </Link>
-                          </div>
-                        </li>
-                        );
-                      })}
-                  </ul>
-                </div>
           </div>
     );
   }

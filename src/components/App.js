@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import Helmet from 'react-helmet';
 import Nav from './Nav';
-import HeardBar from './HeardBar';
+import HeaderBar from './HeaderBar';
 import DockBar from './DockBar';
 
 const App = ({ children }) => {
@@ -18,7 +18,7 @@ const App = ({ children }) => {
               {"property": "og:type", "content": "article"}
           ]}
         />
-        <HeardBar />
+        <HeaderBar />
         <div className={css(styles.containers)}>
           {children}
         </div>
