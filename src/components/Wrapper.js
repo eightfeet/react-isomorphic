@@ -5,26 +5,24 @@ class Wrapper extends Component {
 
   static propTypes = {
     context: PropTypes.shape({
-      insertCss: PropTypes.func,
+      insertCss: PropTypes.func
     }),
     children: PropTypes.element.isRequired,
-    error: PropTypes.object,
+    error: PropTypes.object
   };
 
   static childContextTypes = {
-    insertCss: PropTypes.func.isRequired,
+    insertCss: PropTypes.func.isRequired
   };
 
-  getChildContext() {
+  getChildContext () {
     const context = this.props.context;
     return {
-      insertCss: context.insertCss || emptyFunction,
+      insertCss: context.insertCss || emptyFunction
     };
   }
 
-
-
-  render() {
+  render () {
     return this.props.children;
   }
 

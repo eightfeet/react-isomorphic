@@ -1,7 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import {StyleSheet, css} from 'aphrodite';
 import Link from 'react-router/lib/Link';
-import s from './HeardBar.css';
 import MenuData from './MenuData';
 
 class HeardBar extends Component {
@@ -18,12 +17,12 @@ class HeardBar extends Component {
     } else {
       this.setState({isSearch: true});
     }
-    this.refs.inputbox.style.width = '14rem';
+    this.refs.inputbox.style.width = '15rem';
     this.refs.inputsearch.focus();
     this.refs.inputsearch.style.backgroundColor = '#e6e7e9';
   }
   handlerBlur = () => {
-    this.refs.inputbox.style.width = '4.0rem';
+    this.refs.inputbox.style.width = '3.292rem';
     this.refs.inputsearch.style.backgroundColor = '#fff';
   }
   handlerOpenMenu = () => {
@@ -42,26 +41,22 @@ class HeardBar extends Component {
   render () {
     return (
           <div>
-              <div className={`${css(styles.heardbar)} clearfix`}>
-                <div className="fl w3">
-                    <div className={`mgl1 mgt1 ${css(styles.logo)}`}></div>
-                </div>
-                <ul className={`fr ${css(styles.search)} w7 nls clearfix`}>
-                    <li className={'fr'} onClick={ this.handlerOpenMenu}>
-                        <span className={`icon-more ${css(styles.bannerico)}`} style={{fontSize: '2rem'}}></span>
-                    </li>
-                    <li className="fr">
-                        <div ref="inputbox" onClick={this.handlerSearch} className={`pr ${css(styles.slidesearch)}`} style={{
-                          width: '4.0rem'
-                        }}>
-                            <input ref="inputsearch" onBlur={this.handlerBlur} type="text" className={this.state.isSearch
-                                ? `${css(styles.searchinput)} setgray`
-                                : `${css(styles.searchinput)}`}/>
-                            <span className={`icon-search ${css(styles.bannerico, styles.fixicon)}`} style={{fontSize: '2rem'}}></span>
-                        </div>
-                    </li>
-                  </ul>
-              </div>
+              <ul className={`clearfix ${css(styles.dockbar)} nls`}>
+                {
+                  MenuData.map((item, i) => {
+                    return (
+                      <li className="fl w2-5 al-c" key={item.id} style={
+                          item.select
+                          ? {color: '#15ce4f', fontSize: '2rem', lineHeight: '0rem'}
+                          : {color: '#8699a0', fontSize: '2rem', lineHeight: '0rem'}}
+                        >
+                        <div className={`${item.icon} pdt-5 pdb-2`}></div>
+                        <span className="fz-s">{item.name}</span>
+                      </li>
+                    );
+                  })
+                }
+              </ul>
               <div className={
                   `${this.state.isSubMenu
                     ? 'fr submenu show'
@@ -104,50 +99,16 @@ class HeardBar extends Component {
 }
 
 const styles = StyleSheet.create({
-  heardbar: {
+  dockbar: {
     position: 'absolute',
     left: '0',
-    top: '0',
-    height: '4.0rem',
-    lineHeight: '4.0rem',
+    bottom: '0',
+    height: '4.250rem',
     backgroundColor: '#ffffff',
     width: '100%',
-    borderBottom: '1px solid #dfdfdf',
+    borderTop: '1px solid #dfdfdf',
+    color: '#15ce4f',
     zIndex: '10'
-  },
-  setgray: {
-    backgroundColor: '#e6e7e9'
-  },
-  slidesearch: {
-    paddingTop: '0.750rem',
-    transition: 'width .5s'
-  },
-  fixicon: {
-    position: 'absolute',
-    left: '0',
-    top: '0'
-  },
-  bannerico: {
-    fontSize: '1.3rem',
-    color: '#8699a0',
-    width: '4.0rem',
-    height: '4.0rem',
-    display: 'block',
-    fontWeight: 'bolder',
-    textAlign: 'center',
-    lineHeight: '4.0rem'
-  },
-  searchinput: {
-    border: 'none',
-    paddingLeft: '4.0rem',
-    height: '2.5rem'
-  },
-  logo: {
-    width: '4.042rem',
-    height: '1.958rem',
-    backgroundRepeat: 'no-repeat',
-    backgroundImage: 'url("/logo.png")',
-    backgroundSize: '100% 100%'
   }
 });
 

@@ -3,6 +3,7 @@ import { StyleSheet, css } from 'aphrodite';
 import Helmet from 'react-helmet';
 import Nav from './Nav';
 import HeardBar from './HeardBar';
+import DockBar from './DockBar';
 
 const App = ({ children }) => {
   return (
@@ -21,7 +22,7 @@ const App = ({ children }) => {
         <div className={css(styles.containers)}>
           {children}
         </div>
-        <div>dock</div>
+        <DockBar />
     </div>
   );
 };
