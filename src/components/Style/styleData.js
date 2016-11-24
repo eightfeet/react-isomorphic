@@ -293,6 +293,96 @@ const icondata = {
                 class: 'font-biggest'
             }
         ]
+    },
+    borderRadius: {
+        name: 'borderRadius',
+        dis: '圆角 ($radius,.radius)按照大小分为6个级别（-big,-bigger,-biggest,-small,-smaller,-smallest）',
+        data: [
+            {
+                name:'$radius-smallest',
+                type: 0,
+                dis: '圆角6px',
+                class: 'radius-smallest'
+            },
+            {
+                name:'$radius-smaller',
+                type: 0,
+                dis: '圆角8px',
+                class: 'radius-smaller'
+            },
+            {
+                name:'$radius-small',
+                type: 0,
+                dis: '圆角11px',
+                class: 'radius-small'
+            },
+            {
+                name:'$radius',
+                type: 0,
+                dis: '圆角19px',
+                class: 'radius'
+            },
+            {
+                name:'$radius-big',
+                type: 0,
+                dis: '圆角35px',
+                class: 'radius-big'
+            },
+            {
+                name:'$radius-bigger',
+                type: 0,
+                dis: '圆角48px',
+                class: 'radius-bigger'
+            },
+            {
+                name:'$radius-biggest',
+                type: 0,
+                dis: '圆角200px',
+                class: 'radius-biggest'
+            },
+            {
+                name:'.radius-smallest',
+                type: 1,
+                dis: '圆角6px',
+                class: 'radius-smallest'
+            },
+            {
+                name:'.radius-smaller',
+                type: 1,
+                dis: '圆角8px',
+                class: 'radius-smaller'
+            },
+            {
+                name:'.radius-small',
+                type: 1,
+                dis: '圆角11px',
+                class: 'radius-small'
+            },
+            {
+                name:'.radius',
+                type: 1,
+                dis: '圆角19px',
+                class: 'radius'
+            },
+            {
+                name:'.radius-big',
+                type: 1,
+                dis: '圆角35px',
+                class: 'radius-big'
+            },
+            {
+                name:'.radius-bigger',
+                type: 1,
+                dis: '圆角48px',
+                class: 'radius-bigger'
+            },
+            {
+                name:'.radius-biggest',
+                type: 1,
+                dis: '圆角200px',
+                class: 'radius-biggest'
+            }
+        ]
     }
 };
 

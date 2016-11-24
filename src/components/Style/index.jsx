@@ -5,6 +5,7 @@ import s from './style.scss';
 
 const colorList = styleData.color.data;
 const fontList = styleData.fontSize.data;
+const radiusList = styleData.borderRadius.data;
 
 class IconList extends Component {
   constructor () {
@@ -12,12 +13,14 @@ class IconList extends Component {
     this.state = {
       colorList: colorList,
       fontList: fontList,
+      radiusList: radiusList
     };
   }
   handlerSearch = (event) => {
     let s = event.target.value;
     let colordata = [];
     let fontdata = [];
+    let radiusdata = [];
     colorList.map((item, i) => {
         if(item.name.indexOf(s) !== -1){
             let temp = {};
@@ -38,9 +41,20 @@ class IconList extends Component {
             fontdata.push(temp);
         }
     });
+    radiusList.map((item, i) => {
+        if(item.name.indexOf(s) !== -1 || item.dis.indexOf(s) !== -1){
+            let temp = {};
+            temp.name = item.name;
+            temp.class = item.class;
+            temp.type = item.type;
+            temp.dis = item.dis;
+            radiusdata.push(temp);
+        }
+    });
     this.setState({
         colorList: colordata,
-        fontList: fontdata
+        fontList: fontdata,
+        radiusList: radiusdata
     })
   }
   render () {
@@ -121,6 +135,45 @@ class IconList extends Component {
                                 <div className={`${s.coloritem}`} key={i} style={{textAlign:'left',lineHeight:'1rem',height:'4rem'}}>
                                     <span className={`${item.class}`}>{`字体${item.dis}`}</span><br/>
                                     <span style={{color:'gray',fontSize:'0.8rem'}}>{item.name}</span>
+                                </div>
+                            )
+                        }
+                    })}
+                </div>
+            </div>
+
+            <div className={s.block}  style={{marginBottom:'1rem'}}>
+                <h4 style={{paddingBottom:'0.5rem'}}>圆角大小</h4>
+                <p style={{fontSize:'.8rem',color:'gray',paddingBottom:'0.5rem'}}>{styleData.borderRadius.dis}</p>
+                <h5 style={{paddingBottom: '1rem'}}>变量</h5>
+                <div className={s.clearfix} >
+                    {this.state.radiusList.map((item, i) => {
+                        if (item.type === 0) {
+                            return(
+                                <div className={s.radiuitem} key={i}>
+                                    <div style={{padding:'1rem'}}>
+                                        <div className={`${s.radiusbox} ${item.class}`}>
+                                            {`${item.dis}`}<br/>
+                                            <span style={{color:'gray',fontSize:'0.8rem'}}>{item.name}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+                    })}
+                </div>
+                <h5 style={{paddingBottom: '1rem'}}>Css</h5>
+                <div className={s.clearfix} >
+                    {this.state.radiusList.map((item, i) => {
+                        if (item.type === 1) {
+                            return(
+                                <div className={s.radiuitem} key={i}>
+                                    <div style={{padding:'1rem'}}>
+                                        <div className={`${s.radiusbox} ${item.class}`}>
+                                            {`${item.dis}`}<br/>
+                                            <span style={{color:'gray',fontSize:'0.8rem'}}>{item.name}</span>
+                                        </div>
+                                    </div>
                                 </div>
                             )
                         }
