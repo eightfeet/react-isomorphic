@@ -110,107 +110,107 @@ const icondata = {
                 dis: null,
                 class: '.blue-dark'
             }, {
-                name: '.white',
+                name: '.(bg-)white',
                 type: 1,
                 dis: null,
                 class: '.white'
             }, {
-                name: '.gray-lightest',
+                name: '.(bg-)gray-lightest',
                 type: 1,
                 dis: null,
                 class: '.gray-lightest'
             }, {
-                name: '.gray-lighter',
+                name: '.(bg-)gray-lighter',
                 type: 1,
                 dis: null,
                 class: '.gray-lighter'
             }, {
-                name: '.gray-light',
+                name: '.(bg-)gray-light',
                 type: 1,
                 dis: null,
                 class: '.gray-light'
             }, {
-                name: '.gray',
+                name: '.(bg-)gray',
                 type: 1,
                 dis: null,
                 class: '.gray'
             }, {
-                name: '.gray-dark',
+                name: '.(bg-)gray-dark',
                 type: 1,
                 dis: null,
                 class: '.gray-dark'
             }, {
-                name: '.gray-darker',
+                name: '.(bg-)gray-darker',
                 type: 1,
                 dis: null,
                 class: '.gray-darker'
             }, {
-                name: '.gray-darkest',
+                name: '.(bg-)gray-darkest',
                 type: 1,
                 dis: null,
                 class: '.gray-darkest'
             }, {
-                name: '.black',
+                name: '.(bg-)black',
                 type: 1,
                 dis: null,
                 class: '.black'
             }, {
-                name: '.green-light',
+                name: '.(bg-)green-light',
                 type: 1,
                 dis: null,
                 class: '.green-light'
             }, {
-                name: '.green',
+                name: '.(bg-)green',
                 type: 1,
                 dis: null,
                 class: '.green'
             }, {
-                name: '.green-dark',
+                name: '.(bg-)green-dark',
                 type: 1,
                 dis: null,
                 class: '.green-dark'
             }, {
-                name: '.red-light',
+                name: '.(bg-)red-light',
                 type: 1,
                 dis: null,
                 class: '.red-light'
             }, {
-                name: '.red',
+                name: '.(bg-)red',
                 type: 1,
                 dis: null,
                 class: '.red'
             }, {
-                name: '.red-dark',
+                name: '.(bg-)red-dark',
                 type: 1,
                 dis: null,
                 class: '.red-dark'
             }, {
-                name: '.orange-light',
+                name: '.(bg-)orange-light',
                 type: 1,
                 dis: null,
                 class: '.orange-light'
             }, {
-                name: '.orange',
+                name: '.(bg-)orange',
                 type: 1,
                 dis: null,
                 class: '.orange'
             }, {
-                name: '.orange-dark',
+                name: '.(bg-)orange-dark',
                 type: 1,
                 dis: null,
                 class: '.orange-dark'
             }, {
-                name: '.blue-light',
+                name: '.(bg-)blue-light',
                 type: 1,
                 dis: null,
                 class: '.blue-light'
             }, {
-                name: '.blue',
+                name: '.(bg-)blue',
                 type: 1,
                 dis: null,
                 class: '.blue'
             }, {
-                name: '.blue-dark',
+                name: '.(bg-)blue-dark',
                 type: 1,
                 dis: null,
                 class: '.blue-dark'
@@ -382,6 +382,28 @@ const icondata = {
                 dis: '圆角200px',
                 class: 'radius-biggest'
             }
+        ]
+    },
+    float: {
+        name: '浮动和清除浮动',
+        dis: '.fl左浮动 .fr右浮动 .clearfix清除浮动',
+        data: [
+            {
+                name:'.fl',
+                type: 1,
+                dis: '向左浮动float:left',
+                class: 'fl'
+            },{
+                name:'.fr',
+                type: 1,
+                dis: '向右浮动float:right',
+                class: 'fr'
+            },{
+                name:'.clearfix',
+                type: 1,
+                dis: '清除浮动',
+                class: 'clearfix'
+            },
         ]
     }
 };

@@ -6,6 +6,7 @@ import s from './style.scss';
 const colorList = styleData.color.data;
 const fontList = styleData.fontSize.data;
 const radiusList = styleData.borderRadius.data;
+const floatList = styleData.float.data;
 
 class IconList extends Component {
   constructor () {
@@ -13,7 +14,8 @@ class IconList extends Component {
     this.state = {
       colorList: colorList,
       fontList: fontList,
-      radiusList: radiusList
+      radiusList: radiusList,
+      floatList: floatList
     };
   }
   handlerSearch = (event) => {
@@ -21,6 +23,7 @@ class IconList extends Component {
     let colordata = [];
     let fontdata = [];
     let radiusdata = [];
+    let floatdata = [];
     colorList.map((item, i) => {
         if(item.name.indexOf(s) !== -1){
             let temp = {};
@@ -51,10 +54,21 @@ class IconList extends Component {
             radiusdata.push(temp);
         }
     });
+    floatList.map((item, i) => {
+        if(item.name.indexOf(s) !== -1 || item.dis.indexOf(s) !== -1){
+            let temp = {};
+            temp.name = item.name;
+            temp.class = item.class;
+            temp.type = item.type;
+            temp.dis = item.dis;
+            floatdata.push(temp);
+        }
+    });
     this.setState({
         colorList: colordata,
         fontList: fontdata,
-        radiusList: radiusdata
+        radiusList: radiusdata,
+        floatList: floatdata
     })
   }
   render () {
@@ -86,7 +100,8 @@ class IconList extends Component {
                     />
                 </div>
             </div>
-            <div className={s.block}  style={{marginBottom:'1rem'}}>
+            <div className={s.block}  
+                style={{marginBottom:'1rem',display:`${this.state.colorList.length===0?'none':'block'}`}}>
              <h4 style={{paddingBottom:'0.5rem'}}>色彩</h4>
                 <p style={{fontSize:'.8rem',color:'gray',paddingBottom:'0.5rem'}}>{styleData.color.dis}</p>
                 <h5>变量</h5>
@@ -111,7 +126,8 @@ class IconList extends Component {
                 </div>
             </div>
             
-            <div className={s.block}  style={{marginBottom:'1rem'}}>
+            <div className={s.block}  
+                style={{marginBottom:'1rem',display:`${this.state.fontList.length===0?'none':'block'}`}}>
              <h4 style={{paddingBottom:'0.5rem'}}>字体大小</h4>
                 <p style={{fontSize:'.8rem',color:'gray',paddingBottom:'0.5rem'}}>{styleData.fontSize.dis}</p>
                 <h5 style={{paddingBottom: '1rem'}}>变量</h5>
@@ -142,7 +158,8 @@ class IconList extends Component {
                 </div>
             </div>
 
-            <div className={s.block}  style={{marginBottom:'1rem'}}>
+            <div className={s.block}  
+                style={{marginBottom:'1rem',display:`${this.state.radiusList.length===0?'none':'block'}`}}>
                 <h4 style={{paddingBottom:'0.5rem'}}>圆角大小</h4>
                 <p style={{fontSize:'.8rem',color:'gray',paddingBottom:'0.5rem'}}>{styleData.borderRadius.dis}</p>
                 <h5 style={{paddingBottom: '1rem'}}>变量</h5>
@@ -180,6 +197,29 @@ class IconList extends Component {
                     })}
                 </div>
             </div>
+
+            <div className={s.block}  
+                style={{marginBottom:'1rem',display:`${this.state.floatList.length===0?'none':'block'}`}}>
+                <h4 style={{paddingBottom:'0.5rem'}}>浮动，清除浮动</h4>
+                <p style={{fontSize:'.8rem',color:'gray',paddingBottom:'0.5rem'}}>{styleData.float.dis}</p>
+                <h5 style={{paddingBottom: '1rem'}}>Css</h5>
+                <div className={s.clearfix} >
+                    {this.state.floatList.map((item, i) => {
+                        if (item.type === 1) {
+                            return(
+                                <div 
+                                    className={`${s.radiusbox} ${item.class}`}  
+                                    key={i} 
+                                    style={{width:'40%',backgroundColor:`${item.class==='clearfix'?'white':'#ddd'}`}}>
+                                    {`${item.dis}`}<br/>
+                                    <span style={{color:'gray',fontSize:'0.8rem'}}>{item.name}</span>
+                                </div>
+                            )
+                        }
+                    })}
+                </div>
+            </div>
+
         </div>
         )
     }
