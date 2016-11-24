@@ -48,7 +48,7 @@ class HeardBar extends Component {
                 </div>
                 <ul className={`fr ${css(styles.search)} w7 nls clearfix`}>
                     <li className={'fr'} onClick={ this.handlerOpenMenu}>
-                        <span className={`icon-more ${css(styles.bannerico)}`} style={{fontSize: '2rem'}}></span>
+                        <span className={`icon-more-b ${css(styles.bannerico)}`} ></span>
                     </li>
                     <li className="fr">
                         <div ref="inputbox" onClick={this.handlerSearch} className={`pr ${css(styles.slidesearch)}`} style={{
@@ -57,7 +57,7 @@ class HeardBar extends Component {
                             <input ref="inputsearch" onBlur={this.handlerBlur} type="text" className={this.state.isSearch
                                 ? `${css(styles.searchinput)} setgray`
                                 : `${css(styles.searchinput)}`}/>
-                            <span className={`icon-search ${css(styles.bannerico, styles.fixicon)}`} style={{fontSize: '2rem'}}></span>
+                            <span className={`icon-search-a ${css(styles.bannerico, styles.fixicon)}`} style={{fontSize: '2rem'}}></span>
                         </div>
                     </li>
                   </ul>
@@ -72,7 +72,7 @@ class HeardBar extends Component {
                     >
                   <ul className={`clearfix  ${'subicon'} nls`}>
                       {MenuData.map((item, i) => {
-                        if (item.id === 10) {
+                        if (item.id === 9) {
                           return (
                             <li className={`fl ${'iconitem'}`} onClick={this.handlerMenuItem} key={item.id}>
                               <div className={'bdright bdbottom'}>
@@ -128,12 +128,11 @@ const styles = StyleSheet.create({
     top: '0'
   },
   bannerico: {
-    fontSize: '1.3rem',
+    fontSize: '2.2rem',
     color: '#8699a0',
     width: '4.0rem',
     height: '4.0rem',
     display: 'block',
-    fontWeight: 'bolder',
     textAlign: 'center',
     lineHeight: '4.0rem'
   },

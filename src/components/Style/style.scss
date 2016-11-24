@@ -1,0 +1,26 @@
+/*临时图标*/
+
+/*//==clearfix*/
+
+.clearfix:before,.clearfix:after{
+    content:"";
+    display:table;
+}
+.clearfix:after{clear:both;}
+
+
+.block{
+  width: 95%;
+  margin: 0 auto;
+  background-color: #fff;
+  border:1px solid #ddd;
+  border-radius: .2rem;
+  padding: .2rem;
+}
+.coloritem{
+  height: 3rem;
+  width: 33.333%;
+  float: left;
+  text-align: center;
+  line-height: 3rem;
+}

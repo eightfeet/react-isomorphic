@@ -1,4 +1,4 @@
-import IconList from '../../components/IconList';
+import IconList from '../../components/Icon';
 
 export default {
   path: 'icon',

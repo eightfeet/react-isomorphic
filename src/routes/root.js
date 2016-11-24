@@ -15,6 +15,7 @@ export default function createRoutes (store) {
           require('./Post').default(store), // add async reducer
           // require('./Artical').default(store), // add async reducer
           require('./IconList').default,
+          require('./StyleList').default,
           require('./NotFound').default
         ]);
       });
