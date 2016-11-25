@@ -1,0 +1,88 @@
+/*头部菜单media*/
+.logo{
+  width: 4.042rem;
+  height: 1.958rem;
+  background-repeat: no-repeat;
+  background-image: url(./logo.png);
+  background-size: 100% 100%;
+}
+.heardbar{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 4.0rem;
+  line-height: 4.0rem;
+  background-color: #ffffff;
+  width: 100%;
+  border-bottom: 1px solid #dfdfdf;
+  z-index: 10
+}
+.slidesearch{
+  padding-top: 0.750rem;
+  transition: width .5s;
+}
+.searchinput{
+  border: none !important;
+  padding-left: 4.0rem !important;
+  height: 2.5rem !important;
+}
+.fixicon{
+  position: absolute;
+  left: 0;
+  top: 0
+}
+.bannerico{
+  font-size: 2.2rem;
+  color: #8699a0;
+  width: 4.0rem;
+  height: 4.0rem;
+  display: block;
+  text-align: center;
+  line-height: 4.0rem
+}
+.submenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 11;
+}
+.subicon{
+  position: absolute;
+  left: 0;
+  top: 4rem;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #e5ebee;
+}
+.subicon li{
+  width: 33.3%;
+}
+
+.subicon li div{
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: .8rem;
+  height: 4rem;
+}
+.subicon p{
+  margin: 0;
+}
+
+.subicon .bdright{
+  border-right: 1px solid #e5ebee;
+}
+
+.subicon .bdbottom{
+  border-bottom: 1px solid #e5ebee;
+}
+
+.iconitem div:before{
+  display: block;
+  text-align: center;
+  color: #26d15b;
+  line-height: 3.375rem;
+  font-size: 1.55rem;
+  height: 3.375rem;
+}

@@ -294,6 +294,42 @@ const icondata = {
             }
         ]
     },
+    fontStyle: {
+        name: '字体对齐与粗细',
+        dis: '对齐方式－（.al-l:左对齐，.al-c:中对齐，.al-r:右对齐），是否粗体－（.fw-n:正常，.fw-b:粗体）',
+        data: [
+            {   
+                name:'.al-l',
+                type: 1,
+                dis: '左对齐，(text-align:left)',
+                class: 'al-l'
+            },
+            {   
+                name:'.al-c',
+                type: 1,
+                dis: '中对齐，(text-align:center)',
+                class: 'al-c'
+            },
+            {   
+                name:'.al-r',
+                type: 1,
+                dis: '右对齐，(text-align:right)',
+                class: 'al-r'
+            },
+            {   
+                name:'.fw-n',
+                type: 1,
+                dis: '不粗体（font-weight: normal）',
+                class: 'fw-n'
+            },
+            {   
+                name:'.fw-b',
+                type: 1,
+                dis: '粗体（font-weight: bold）',
+                class: 'fw-b'
+            },
+        ]
+    },
     borderRadius: {
         name: 'borderRadius',
         dis: '圆角 ($radius,.radius)按照大小分为6个级别（-big,-bigger,-biggest,-small,-smaller,-smallest）',
@@ -404,6 +440,222 @@ const icondata = {
                 dis: '清除浮动',
                 class: 'clearfix'
             },
+        ]
+    },
+    layout: {
+        name: '布局定位与居中',
+        dis: '居中（.center）定位（.pr:相对,.pa:决定,.pf:固定',
+        data: [
+            {
+                name:'.center',
+                type: 1,
+                dis: '布局居中对齐',
+                class:'center'
+            },
+            {
+                name:'.pr',
+                type: 1,
+                dis: '相对定位 posation:relative',
+                class:'pr'
+            },
+            {
+                name:'.pa',
+                type: 1,
+                dis: '绝对定位 posation:absolute',
+                class:'pa'
+            },
+            {
+                name:'.pf',
+                type: 1,
+                dis: '固定 position:fix',
+                class:'pf'
+            }
+        ]
+    },
+    hide: {
+        name: '隐藏与超出隐藏',
+        dis: '隐藏（.hide）显示（.show）超过隐藏（.oh）',
+        data: [
+            {
+                name:'oh',
+                type: 1,
+                dis: 'overflow:hide',
+                class:'oh'
+            },
+            {
+                name:'show',
+                type: 1,
+                dis: 'display:block',
+                class:'show'
+            },
+            {
+                name:'hide',
+                type: 1,
+                dis: 'display:none',
+                class:'hide'
+            },
+        ]
+    },
+    width: {
+        name: '百分比宽度',
+        dis: '.w*-*,范围：1% 到 100%百分比宽度：1-10 40－60 90-100 步值为1%， 其余步值为5%, 100%(.ww)',
+        data: [
+            {
+                name:'.w2-5',
+                type: 1,
+                dis: 'width:25%',
+                class:'w2-5'
+            },
+            {
+                name:'...',
+                type: 1,
+                dis: '',
+                class:''
+            },
+            {
+                name:'.w5-5',
+                type: 1,
+                dis: 'width:55%',
+                class:'w5-5'
+            },
+            {
+                name:'...',
+                type: 1,
+                dis: '',
+                class:''
+            },
+            {
+                name:'.w9-9',
+                type: 1,
+                dis: 'width:99%',
+                class:'w9-9'
+            },
+            {
+                name:'.ww',
+                type: 1,
+                dis: 'width:100%',
+                class:'ww'
+            }
+        ]
+    },
+    padding: {
+        name: '内边距padding',
+        dis: '.pd(padding),.pdl(padding-left),.pdr(padding-right),.pdt(padding-top)范围：1 到 10 包含1位小数点值',
+        data: [
+            {
+                name:'.pd-1',
+                type: 1,
+                dis: 'padding:0.1rem',
+                class:'pd1'
+            },
+            {
+                name:'...',
+                type: 1,
+                dis: '',
+                class:''
+            },
+            {
+                name:'.pd1-1',
+                type: 1,
+                dis: 'padding:1.1rem',
+                class:'pd1-1'
+            },
+            {
+                name:'...',
+                type: 1,
+                dis: '',
+                class:''
+            },
+            {
+                name:'.pd9-9',
+                type: 1,
+                dis: 'padding:9.9rem',
+                class:'pd9-9'
+            }
+        ]
+    },
+    margin: {
+        name: '边距margin',
+        dis: '.mg(margin),.mgl(margin-left),.mgr(margin-right),.mgt(margin-top)范围：1 到 10 包含1位小数点值',
+        data: [
+            {
+                name:'.mg-1',
+                type: 1,
+                dis: 'margin:0.1rem',
+                class:'mg1'
+            },
+            {
+                name:'...',
+                type: 1,
+                dis: '',
+                class:''
+            },
+            {
+                name:'.mg1-1',
+                type: 1,
+                dis: 'margin:1.1rem',
+                class:'mg1-1'
+            },
+            {
+                name:'...',
+                type: 1,
+                dis: '',
+                class:''
+            },
+            {
+                name:'.mg9-9',
+                type: 1,
+                dis: 'margin:9.9rem',
+                class:'mg9-9'
+            }
+        ]
+    },
+    listStyle: {
+        name: '系统列表样式',
+        dis: '.nls(不启用系统列表样式),.ls-o,.ls-i(启用系统列表样式)',
+        data: [
+            {
+                name:'.nls',
+                type: 1,
+                dis: '无列表样式list-style: none',
+                class:'nls'
+            },
+            {
+                name:'.ls-o',
+                type: 1,
+                dis: '外部列表样式list-style-position:outside',
+                class:'ls-o'
+            },
+            {
+                name:'.ls-i',
+                type: 1,
+                dis: '内部列表样式list-style-position:inside',
+                class:'ls-i'
+            }
+        ]
+    },
+    onShadow: {
+        name: '阴影',
+        dis: '.shadow(阴影),.shadow-top(上阴影),.shadow-bottom(下阴影)',
+        data: [
+            {
+                name:'.shadow',
+                type: 1,
+                dis: '阴影',
+                class:'shadow'
+            },
+            {
+                name:'.shadow-top',
+                type: 1,
+                dis: '上阴影',
+                class:'shadow-top'
+            },
+            {
+                name:'.shadow-bottom',
+                type: 1,
+                dis: '下阴影',
+                class:'shadow-bottom'
+            }
         ]
     }
 };

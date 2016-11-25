@@ -167,8 +167,7 @@ FontWeight
 .fw-b{font-weight: bold !important;}
 
 /***
-范围：1% 到 100%
-百分比宽度：1-10 40－60 90-100 步值为1%， 其余步值为5%
+范围：1% 到 100%百分比宽度：1-10 40－60 90-100 步值为1%， 其余步值为5%
 ***/
 @for $i from 1 through 100 {
     @if ($i < 10) {
@@ -360,6 +359,10 @@ liststyle
   list-style-position:outside !important;
 }
 
+.ls-i li{
+  list-style-position:inside !important;
+}
+
 /***
 阴影
 noShadow
@@ -373,22 +376,3 @@ noShadow
 .shadow-bottom {
   box-shadow: rgba(black, $shadowalph) fixPX(5) 0 fixPX(5),rgba(black, $shadowalph) 0 fixPX(5) fixPX(5),rgba(black, $shadowalph) -1*fixPX(5) 0 fixPX(5),rgba(black, $shadowalph) 0 0 0;
 }
-
-.hhh{
-  height: fixPX(73);
-  color: $test;
-}
-
-.getcolor{
-  background-color:$test;
-}
-
-.bordertest{
-  border: 1px solid $test;
-  background: $green-light;
-  border-radius: $radius-smallest;
-  padding: 5rem;
-  @extend .shadow; 
-}
-
-

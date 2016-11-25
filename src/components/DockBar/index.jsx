@@ -2,8 +2,10 @@ import React, {PropTypes, Component} from 'react';
 import {StyleSheet, css} from 'aphrodite';
 import Link from 'react-router/lib/Link';
 import MenuData from './MenuData';
+import s from './DockBar.css';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
-class HeardBar extends Component {
+class DockBar extends Component {
   constructor () {
     super();
     this.state = {
@@ -41,7 +43,7 @@ class HeardBar extends Component {
   render () {
     return (
           <div>
-              <ul className={`clearfix ${css(styles.dockbar)} nls`}>
+              <ul className={`clearfix ${s.dockbar} nls`}>
                 {
                   MenuData.map((item, i) => {
                     return (
@@ -51,7 +53,7 @@ class HeardBar extends Component {
                           : {color: '#8699a0', fontSize: '2rem', lineHeight: '0rem'}}
                         >
                         <div className={`${item.icon} pdt-5 pdb-2`}></div>
-                        <span className="fz-s">{item.name}</span>
+                        <span className="font-small">{item.name}</span>
                       </li>
                     );
                   })
@@ -62,18 +64,4 @@ class HeardBar extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  dockbar: {
-    position: 'absolute',
-    left: '0',
-    bottom: '0',
-    height: '4.250rem',
-    backgroundColor: '#ffffff',
-    width: '100%',
-    borderTop: '1px solid #dfdfdf',
-    color: '#15ce4f',
-    zIndex: '10'
-  }
-});
-
-export default HeardBar;
+export default withStyles(s)(DockBar);

@@ -1,0 +1,11 @@
+.dockbar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4.250rem;
+    background-color: #ffffff;
+    width: 100%;
+    border-top: 1px solid #dfdfdf;
+    color: #15ce4f;
+    z-index: 1;
+  }

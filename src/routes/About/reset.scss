@@ -112,23 +112,23 @@ a{text-decoration: none; color:$gray}
 
 //==input
 input,select{
-  height: 50/24rem;
+  height: fixPX(50);
   box-sizing: border-box;
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
+  -webkit-border-radius: $radius-smaller;
+  -moz-border-radius: $radius-smaller;
+  border-radius: $radius-smaller;
   appearance:none;
   -moz-appearance:none;
   -webkit-appearance:none;
   vertical-align: middle;
-  font-size: 21/24+rem;
+  font-size: fixPX(20);
 }
 input[type=text],input[type=number],input[type=tel],select{
   display: block;
   width: 100%;
   background-color: #fff;
-  border: solid 1px lighten($gray, 85%);
-  padding: 0 15/24rem;
+  border: solid 1px $gray-light;
+  padding: 0 fixPX(15);
 }
 
 input::-webkit-outer-spin-button,
@@ -136,6 +136,6 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none !important;
     margin: 0;
 }
-button:focus{
+input:focus, button:focus{
   outline:0;
 }
